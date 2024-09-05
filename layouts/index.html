@@ -1,10 +1,29 @@
 {{ define "main" }}
   <main>
-    {{ with .Site.Data.content }}
+    {{ with .Site.Params }}
       <div class="box">
         <div class="wrap">
           {{ partial "header.html" . }}
-          {{ range .sections }} {{ partial "section.html" . }} {{ end }}
+          <h2>Experience</h2>
+          <hr />
+          {{ range .experience.list }} {{ partial "experience.html" . }} {{ end }}
+          <h2>Older Experience</h2>
+          <hr />
+          {{ range .otherExperience.list }} {{ partial "older_experience.html" . }} {{ end }}
+          <h2>Education</h2>
+          <hr />
+          {{ range .education.list }} {{ partial "education.html" . }} {{ end }}
+          <h2>Skills</h2>
+          <hr />
+          {{ range .skills.list }} {{ partial "skills.html" . }} {{ end }}
+          {{ if .courses }}
+          <h2>Publications</h2>
+          <hr />
+          {{ partial "courses.html" .courses.list }}
+          {{ end }}
+          <h2>Interests</h2>
+          <hr />
+          {{ partial "interests.html" .interests.list }}
         </div>
       </div>
     {{ end }}

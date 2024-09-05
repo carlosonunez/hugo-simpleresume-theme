@@ -2,9 +2,9 @@
   <ul>
     {{ $array := . }}
     {{ range $index, $value := . }}
-      {{ if eq (printf "%T" $value) "string" }}
+      {{ if eq (printf "%T" $value.details ) "string" }}
         <li>
-          {{ $value | markdownify }}
+          {{ $value.details | markdownify }}
           {{ $next := (index $array (add 1 $index)) }}
           {{ if eq (printf "%T" $next) "[]interface {}" }}
             {{ partial "bullet-list.html" $next }}

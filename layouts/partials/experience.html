@@ -1,0 +1,15 @@
+<section>
+  {{ with . }}
+    <div>
+      <div class="heading-line">
+        <h3>{{ .company }} - {{ .title }}</h3>
+        <h3>{{ .dates }}</h3>
+      </div>
+      <div class="heading-line">
+       <em>{{ .title }}</em>
+       <em>{{ .location }}</em>
+      </div>
+      {{ partial "bullet-list.html" .items }}
+    </div>
+  {{ end }}
+</section>

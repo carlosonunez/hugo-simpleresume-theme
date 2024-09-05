@@ -1,0 +1,7 @@
+<section>
+  {{ range . }}
+    <div>
+      {{ printf "- **%d**: _%s_ ([%s](%s))" .year .name .publisher .url | markdownify }}
+    </div>
+  {{ end }}
+</section>

@@ -1,0 +1,12 @@
+<section>
+  <p>
+    {{ $numItems := len . }}
+    {{ range $index, $value := . }}
+    {{ if eq $index (sub $numItems 1) }}
+    {{ printf "%s" .name | markdownify }}
+    {{ else }}
+    {{ printf "%s, " .name | markdownify }}
+    {{ end }}
+    {{ end }}
+  </p>
+</section>

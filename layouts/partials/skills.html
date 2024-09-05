@@ -1,0 +1,18 @@
+<section>
+  {{ with . }}
+    <div>
+      <div class="heading-line">
+      <p>
+        <b>{{ .title }}: </b>
+        {{ $numItems := len .items }}
+        {{ range $index, $value := .items }}
+        {{ if eq $index (sub $numItems 1) }}
+        {{ printf "%s" .details | markdownify }}
+        {{ else }}
+        {{ printf "%s, " .details | markdownify }}
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</section>

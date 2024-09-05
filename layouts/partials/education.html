@@ -1,0 +1,13 @@
+<section>
+  {{ with . }}
+    <div>
+      {{ with . }}
+        <div class="heading-line">
+          <h3>{{ .university }}</h3>
+          <h3>{{ .dates }}</h3>
+        </div>
+        <p><em>{{ .degree }}</em></p>
+      {{ end }}
+    </div>
+  {{ end }}
+</section>
