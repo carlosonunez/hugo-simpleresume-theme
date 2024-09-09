@@ -10,7 +10,6 @@
         <div class="wrap">
           {{ partial "header.html" . }}
           {{ $ctx := . }}
-          {{ debug.Dump (printf "default: %+v, current: %+v, provided: %+v" $defaultOrder $order .resumeOrder) }}
           {{ range $order }}
           {{ partial (printf "%s.html" .) $ctx }}
           {{ end }}
