@@ -12,8 +12,11 @@
     {{ with .contact.location }}
     <a href="#">{{ . }}</a>
     {{ end }}
-    {{ with .profile.website }}
-      <a href="https://{{ . }}">{{ . }}</a>
+    {{ with .social.github }}
+    <a href="https://github.com/{{ . }}"><i class="fab fa-github"></i> {{ . }}</a>
+    {{ end }}
+    {{ with .social.linkedin }}
+    <a href="https://linkedin.com/in/{{ . }}"><i class="fab fa-linkedin"></i> {{ . }}</a>
     {{ end }}
   </div>
 </header>

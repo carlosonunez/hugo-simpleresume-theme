@@ -1,8 +1,9 @@
+<h2>Skills</h2>
+<hr />
 <section>
-  {{ with . }}
-    <div>
-      <div class="heading-line">
-      <p>
+  <ul>
+    {{ range .skills.list }}
+    <li>
         <b>{{ .title }}: </b>
         {{ $numItems := len .items }}
         {{ range $index, $value := .items }}
@@ -12,7 +13,7 @@
         {{ printf "%s, " .details | markdownify }}
         {{ end }}
         {{ end }}
-      </div>
-    </div>
-  {{ end }}
+      </li>
+    {{ end }}
+  </ul>
 </section>

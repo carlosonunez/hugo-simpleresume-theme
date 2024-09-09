@@ -88,7 +88,7 @@ header {
   a {
     color: $black;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .page-title {
@@ -144,5 +144,13 @@ header {
     a {
       font-size: 13px;
     }
+  }
+  .box {
+    width: 100%;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 100%;
+    padding: 0in 0in;
   }
 }

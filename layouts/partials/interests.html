@@ -1,7 +1,9 @@
+<h2>Interests</h2>
+<hr />
 <section>
   <p>
-    {{ $numItems := len . }}
-    {{ range $index, $value := . }}
+    {{ $numItems := len .interests.list }}
+    {{ range $index, $value := .interests.list }}
     {{ if eq $index (sub $numItems 1) }}
     {{ printf "%s" .name | markdownify }}
     {{ else }}

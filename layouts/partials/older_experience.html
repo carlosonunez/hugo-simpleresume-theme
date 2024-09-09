@@ -1,7 +1,11 @@
+<h2>Older Experience</h2>
+<hr />
 <section>
-  {{ with . }}
-    <div>
-      {{ printf "- **%d**: _%s_ - %s" .year .employer .item | markdownify }}
-    </div>
+  <ul>
+  {{ range .otherExperience.list }}
+      <li>
+        <b>{{ .year }}: <u>{{ .employer }}</u>, <i>{{ .location }}</i></b> - {{ .item }}
+      </li>
   {{ end }}
+  </ul>
 </section>
