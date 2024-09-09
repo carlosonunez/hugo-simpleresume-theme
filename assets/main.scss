@@ -103,6 +103,16 @@ header {
   }
 }
 
+footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:  #8080801f;
+   color: black;
+   text-align: center;
+   position: fixed;
+}
+
 @include media('>tablet') {
   .box {
     background-color: $white;
@@ -137,6 +147,16 @@ header {
 }
 
 @media print {
+  footer {
+    position: fixed;
+    margin: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    background-color: #8080801f;
+    text-align: center;
+  }
   html {
     zoom: 1.05;
   }

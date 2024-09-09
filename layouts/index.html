@@ -13,6 +13,7 @@
           {{ range $order }}
           {{ partial (printf "%s.html" .) $ctx }}
           {{ end }}
+          {{ partial "footer.html" . }}
         </div>
       </div>
     {{ end }}
